@@ -13,7 +13,7 @@ struct Item {
 int main(){
     
     int item_count = 0; 
-    Item* cart = nullptr; //변수를 case 밖에서 선언하고 초기화 
+    Item* cart = nullptr;  //변수를 case 밖에서 선언하고 초기화 
     std::vector<Item*> items; 
     //구조체 벡터 선언할 때 타입에는 구조체의 이름 넣기
     //처음에 이 벡터를 while 문 안에 선언해서 계속 logic 에러가 뜸 ..
@@ -33,7 +33,7 @@ int main(){
         switch (choice) {
 
             case 1:
-            cart = new Item; // 밖에서 cart 선언.
+            cart = new Item; //밖에서 cart 선언.
             cart->id = item_count;
             std::cout << "Enter item name: " ;
             std::cin >> cart->name ;
