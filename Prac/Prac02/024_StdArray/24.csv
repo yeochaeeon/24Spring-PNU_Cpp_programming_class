@@ -1,0 +1,19 @@
+20240315 - beginner - std::array 
+
+# std::array 
+- std::array 반복자나 대입연산자 사용가능.
+
+# max_element(), min_element() 
+
+- max_elememt(start,end), min_element(start,end) 
+: 각각 가장 크고, 작은 값의 "iterator" 를 반환한다
+
+- *max_elememt(start,end), min_element(start,end)
+: 각각 가장 크고,작은 값의 "value"를 반환함
+
+# iterator (반복자) - auto 타입
+
+- 포인터와 상당히 비슷하며, 컨테이너에 저장되어 있는 원소들을 참조할 때 사용한다.
+- end()함수는 vector 요소의 바로 뒤를 가리키는 주소를 반환함 
+: for loop 돌릴 떄 편함 ex> ( iter != scores.end() )
+

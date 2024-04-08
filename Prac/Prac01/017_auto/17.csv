@@ -1,0 +1,6 @@
+20240315 - intermediate - auto 
+
+# auto 
+auto 키워드 사용은 다음과 같습니다. 
+auto my_var = 3;
+C++ 컴파일러는 컴파일 타임에 숫자 3을 보고 my_var 변수의 타입을 int 로 추론합니다.

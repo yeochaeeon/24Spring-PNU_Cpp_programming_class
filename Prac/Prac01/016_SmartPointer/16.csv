@@ -1,0 +1,14 @@
+# smart pointer 
+
+- unique_ptr<int> pi1 = unique_ptr<int>{new int{1}};
+- unique_ptr<int> pi2{new int{2}};
+- auto pi3 = unique_ptr<int>{new int{3}};
+=>이런 형식들로 선언가능 
+
+# 유니크 포인터를 parameter로 넘길 떄 
+- 특정 객체에 유일한 소유권을 부여하는 포인터 객체 
+- 이 객체를 잘 보관하고 막아주겠다는 성격이 강함
+- unique_ptr 을 직접 전달할 경우 함수가 스택을 정리할 때 delete 되기 때문에 메모리에서 해제되기 때문.
+- 그래서 get함수를 통해서 인자로 전달할 수 있음..
+
+

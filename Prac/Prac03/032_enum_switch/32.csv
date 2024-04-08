@@ -1,0 +1,3 @@
+switch문에 break 꼭 넣어주기 ! 
+std::cin >> enum type 은 안됨..
+std::cin >>  int type 으로 받기 
