@@ -1,0 +1,25 @@
+0402 - 캡슐화 
+
+스위치 문 안에 case 이전에 다른게 들어가면 안되는 듯 .. 나는 double sum 을 switch 안에 선언해서 자꾸 에러남 ..
+* switch (type) {
+
+        case INT:
+        for (int i = fromRow; i <= toRow ; i++ ){
+        sum = sum + data[i][fromCol].getIntVal();
+       
+        }
+        return sum/3;
+
+        case DOUBLE:
+
+        for (int i = fromRow; i <= toRow ; i++ ){
+        sum = sum + data[i][fromCol].getDoubleVal();
+        }
+        return sum/3;
+        
+
+        default :
+        std::cout << "NO.." << std::endl;
+        ; 
+
+    }
