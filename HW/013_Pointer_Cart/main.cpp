@@ -49,22 +49,26 @@ int main(){
             case 2:
             std::cout << "Enter item ID: "<<std::endl; 
             std::cin >> erase;
-            if (items.size()-1 < erase ) std::cout << "Item not found" << std::endl;
-            else {
-                delete items[erase]; //메모리 해제 
-                items.erase(items.begin()+erase);
-                item_count--;
-                std::cout << "Item deleted successfully." << std::endl;
+            
+            for (int i = 0; i < item_count;i++){
+                if(erase == items[i]->id){
+                    delete items[i];
+                }
             }
+            item_count--;
+            std::cout << "Item deleted successfully." << std::endl;
             break;
 
             case 3:
             std::cout << "Enter the item number: " ;
             std::cin >> item_number;
+            if (items[item_number]->id != item_number ) std::cout << "Item not found." << std::endl;
+            else { 
             std::cout << "Item "<< item_number << ": "<< std::endl ;
             std::cout << "Name: " << items[item_number]->name << std::endl 
                     <<"Quantity: "<<items[item_number]->quantity << std::endl
                     <<"Price: " << items[item_number]->price << std::endl;
+            }
             break;
             // case 3: {
             // std::cout << "Enter the item number: ";
@@ -85,9 +89,13 @@ int main(){
             
             case 4:
             std::cout << "Total cost: " ;
-            for (int i = 0 ; i < item_count ; i++) {
-                for (int j = 0 ; j < items[i]->quantity; j++) {
-                    total_price = total_price + items[i]->price;                }
+            for (int i = 0 ; i < items.size() ; i++) {
+                if (i == items[i]->id) {
+                    for (int j = 0 ; j < items[i]->quantity; j++) {
+                        total_price = total_price + items[i]->price;
+                    }
+                }
+                else {}
             }
             std::cout << total_price << std::endl;
             break;
