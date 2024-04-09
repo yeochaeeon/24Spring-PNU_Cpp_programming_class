@@ -1,0 +1,19 @@
+## Map - Key 값 기반 정렬 
+
+```cpp
+// default 오름차순
+map<int,int> myMap1;
+
+// 내림차순
+map<int,int,greater<int>> myMap2;
+
+```
+- key값을 기준으로 오름차순으로 정렬되어 있다.
+- map에 세번째 인자를 넣어 key값 기반의 정렬 기준을 정할 수있다
+
+## Value 값 기반 정렬하기.
+
+- map에는 정렬 함수가 따로 없어서, vector를 활용해야한다. 
+- map을 pair기반의 vector에 넣고 정렬해야 가능하다. 
+- 사용자 정의 함수를 활용해 두 값을 비교하는 방식으로 한다 .
+- 
