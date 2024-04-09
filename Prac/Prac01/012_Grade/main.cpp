@@ -6,7 +6,7 @@
 int main() {
 
     int n ;
-    int score ;
+    //int score ;
     std::cout << "# of students:"<<std::endl;
     std::cin >> n ;
     
