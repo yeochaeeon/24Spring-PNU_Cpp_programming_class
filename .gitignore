@@ -3,5 +3,5 @@ z.Professor Hong
 .vscode
 *.exe
 .idea
-/cmake-build-debug
-/exe_etc_files
+
+/exe
