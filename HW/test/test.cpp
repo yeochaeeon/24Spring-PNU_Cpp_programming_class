@@ -1,3 +1,5 @@
-//
-// Created by codjs on 2024-04-09.
-//
+#include <iostream>
+
+int main(){
+    std::cout << "hello world" << std:: endl;
+}
