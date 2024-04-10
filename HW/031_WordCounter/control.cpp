@@ -56,7 +56,7 @@ int main() {
         for ( int i = 0; i <find.size() ; i++){
             find[i] = tolower(find[i]);
         }
-        auto find_iter = words.find(find);
+        find_iter = words.find(find);
     }
     std::cout << std::endl;
     std::cout << "Bye!" <<std::endl;
