@@ -48,7 +48,7 @@ int main() {
         std::cout << "Enter item ID: " ;
         int del_id ;
         std::cin >> del_id ;
-        auto item_found = std::find(item_lst.begin(), item_lst.end(), [del_id] ( const Item* a ) { return a->id == del_id; }) ;
+        auto item_found = std::find_if(item_lst.begin(), item_lst.end(), [del_id] ( const Item* a ) { return a->id == del_id; }) ;
         if ( item_found != item_lst.end() ) {
           delete *item_found ;
           item_lst.erase(item_found) ;
