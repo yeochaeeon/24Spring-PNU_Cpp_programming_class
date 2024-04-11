@@ -9,8 +9,8 @@ int main() {
                     .removeNonAlnum()
                     .split(' ');
 
-    for (auto& token : tokens)
+    for (auto& token : tokens) {
         std::cout << token << std::endl;
-
+    }
     return 0;
 }
