@@ -1,0 +1,5 @@
+생성자의 인자의 개수나 형태에 따라 헤더파일에 여러 생성자를 정의해주어야하는 코드이다.
+
+    complex(){};
+    complex(double r):r(r){};
+    complex(double r, double i): r(r), i(i) {};
