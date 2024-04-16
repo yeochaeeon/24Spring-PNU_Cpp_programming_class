@@ -1,6 +1,0 @@
-20240326 - func_smart_ptr : 
-
-** #include <memory> // unique_ptr 쓰려면 무조건 넣어줘야하는 memory
-** std::vector<STUDENT> student_list ; // struct 타입의 벡터 요소 
-** auto student = std::unique_ptr<STUDENT> (new STUDENT()); 
-

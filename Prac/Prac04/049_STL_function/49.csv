@@ -1,9 +1,0 @@
-count_if 함수는 벡터를 순회하면서 특정 조건을 만족하는 요소의 '개수'를 출력한다.
-이터레이터가 가리키는 요소에 접근할 때에는 (*iterator) 로 접근 가능하다 .
-
-```cpp
-    // ## Delete if ( quantity == 0 )
-
-    auto last = std::remove_if(inventory.begin(),inventory.end(),[](Item& a){return a.quantity == 0;});
-    inventory.erase(last,inventory.end());
-```
