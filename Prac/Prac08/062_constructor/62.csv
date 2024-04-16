@@ -1,0 +1,9 @@
+생성자의 인자가 아무것도 없는 생성자의 값을 특정한 값으로 고정해주기 위해서는
+```
+Vehicle::Vehicle(){
+    name= "Model Y LR";
+    range=511;
+    batteryCapacity=85;
+}
+```
+이런 형식으로 해주면 된당.

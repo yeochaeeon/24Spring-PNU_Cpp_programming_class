@@ -47,16 +47,23 @@ int main(){
 
     // ## Print number of products priced more than 2dollors
     // count_if -> 개수 출력 ~!
-    auto count = std::count_if(inventory.begin(),inventory.end(),[](Item& a){return a.price >= 2;});
+    auto count = std::count_if(inventory.begin(),
+                               inventory.end(),
+                               [](Item& a){return a.price >= 2;});
     std::cout << "Number of expensive items: " << count << std::endl;
 
 
     // ## Delete if ( quantity == 0 )
-    auto last = std::remove_if(inventory.begin(),inventory.end(),[](Item& a){return a.quantity == 0;});
+    auto last = std::remove_if(inventory.begin(),
+                               inventory.end(),
+                               [](Item& a){return a.quantity == 0;});
+
     inventory.erase(last,inventory.end());
 
     // Print all inventory
-    std::for_each(inventory.begin(),inventory.end(),[](Item& i){std::cout << i.name << " " << i.price << " " << i.quantity <<std::endl;});
+    std::for_each(inventory.begin(),
+                  inventory.end(),
+                  [](Item& i){std::cout << i.name << " " << i.price << " " << i.quantity <<std::endl;});
 }
 
 
