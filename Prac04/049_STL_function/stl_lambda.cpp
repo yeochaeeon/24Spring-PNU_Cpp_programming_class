@@ -40,7 +40,9 @@ int main(){
 
     // ## find item with its name
     // find_if 함수는 이터레이터를 반환함
-    auto search_iter= std::find_if(inventory.begin(),inventory.end(),[](Item& a){ return a.name == "Grape";});
+    auto search_iter= std::find_if(inventory.begin(),
+                                   inventory.end(),
+                                   [](Item& a){ return a.name == "Grape";});
     std::cout << "Item found: " << (*search_iter).name << " " << (*search_iter).price << " " << (*search_iter).quantity << std::endl;
     //iterator는 인덱스가 아니다 . (*이터레이터)로 쓰자.
 

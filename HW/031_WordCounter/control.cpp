@@ -10,7 +10,7 @@
 
 bool cmp(std::pair<std::string,int>&a, std::pair<std::string,int>&b){
     if (a.second == b.second) return a.first < b.first ; // 빈도수가 같으면 사전순으로 배치
-    else return a.second > b.second;//빈도수 기준 내림차순
+    else return a.second > b.second; //빈도수 기준 내림차순
 } //return 값이 true이면 바꿈.
 
 int main() {

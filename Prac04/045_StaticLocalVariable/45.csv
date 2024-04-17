@@ -1,0 +1,3 @@
+## future 와 promise 의 관계
+* future 와 thread 간에 promise를 매개변수로 사용하여 비오기 처리에 대한 값ㅇㄹ 얻어 옵니다 .
+*

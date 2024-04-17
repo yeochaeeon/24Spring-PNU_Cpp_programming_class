@@ -1,8 +1,7 @@
 #include <future>
 #include <iostream>
 #include <thread>
-
-#include "static.h"
+#include "static.cpp"
 
 int main() {
     std::promise<int> r1, r2;
