@@ -2,7 +2,29 @@
 // Created by codjs on 2024-04-16.
 //
 
-#ifndef C_PROGRAMMING_DEPARTMENT_H
-#define C_PROGRAMMING_DEPARTMENT_H
+#include <iostream>
+#include "Faculty.h"
+#include <vector>
 
-#endif //C_PROGRAMMING_DEPARTMENT_H
+class Department{
+public:
+    Department(std::string dept, Faculty* faculty )
+        :dept(dept), fac(faculty){};
+
+    Department(const std::string& deptName)
+        : dept(deptName), fac(nullptr) {};
+
+    std::string getName(){ return dept; }
+
+    void setFaculty(Faculty* faculty){
+        fac = faculty;
+    }
+
+    Faculty* getFac(){
+        return fac;
+    }
+private:
+    std::string dept;
+    Faculty* fac;
+
+};

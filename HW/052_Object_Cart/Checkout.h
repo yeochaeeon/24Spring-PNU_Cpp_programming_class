@@ -16,7 +16,7 @@ public:
     int calculateTotalPrice(std::vector<Item>::const_iterator begin,
                             std::vector<Item>::const_iterator end) const;
 
-    void setShippingAddress(const std::string &shippingAddress);
+    void setShippingAddress(const std::string& shippingAddress);
     void setDiscountCode(DiscountCode discountCode);
 
 private:

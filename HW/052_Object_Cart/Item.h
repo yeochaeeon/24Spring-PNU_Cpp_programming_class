@@ -2,7 +2,6 @@
 // Created by codjs on 2024-04-18.
 //
 #include <iostream>
-
 class Item {
 public:
     Item(std::string name, int quantity, int price)

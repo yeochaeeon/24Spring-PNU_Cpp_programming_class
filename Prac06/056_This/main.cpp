@@ -1,5 +1,5 @@
 #include "StringSplitter.cpp"
-
+//method chaining
 int main() {
     std::string myString;
     std::getline(std::cin, myString);

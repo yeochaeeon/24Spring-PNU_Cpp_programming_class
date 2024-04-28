@@ -3,7 +3,7 @@
 
 void inc(std::promise<int> && result) {
     //your implementation
-    static int COUNTER = 0;
+    int COUNTER = 0;
     // 증가된 카운터 값을 설정합니다.
     for (int i = 0; i < 100000 ; ++i){
         ++COUNTER;

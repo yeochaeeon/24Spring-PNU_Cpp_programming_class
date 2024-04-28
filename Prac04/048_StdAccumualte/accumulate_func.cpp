@@ -13,7 +13,9 @@ int main() {
 
     int N; std::cin >> N;
     std::vector<double> vec;
-    std::generate_n(std::back_inserter(vec), N, [] () { return *(std::istream_iterator<double>{std::cin}); });
+    std::generate_n(std::back_inserter(vec),
+                     N,
+                    [] () { return *(std::istream_iterator<double>{std::cin}); });
 
     int total ;
 

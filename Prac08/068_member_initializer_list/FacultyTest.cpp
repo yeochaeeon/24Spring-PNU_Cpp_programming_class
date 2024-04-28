@@ -1,7 +1,5 @@
 #include <memory>
 #include "University.h"
-#include "Department.h"
-#include "Faculty.h"
 
 int main() {
     auto faculty = std::make_shared<Faculty>("Computer Science", 10);
