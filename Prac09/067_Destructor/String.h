@@ -7,8 +7,8 @@ class String{
     public:
         String();
         String(const char* str);
-        String(const String& other);
-        ~String() ;
+        String (const String& other);
+        ~String() noexcept;
         void print(const char* msg);
         char& at(size_t i);
     private:

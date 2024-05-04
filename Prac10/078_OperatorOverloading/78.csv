@@ -1,0 +1,9 @@
+friend 로 객체의 private 변수에 접근이 가능하다
+**
+std::cout << "********** In order of their id" << std::endl;
+for (const auto& [id, student] : student_grades) {
+    std::cout << student << std::endl;
+}
+**
+여기서 [ ---, ---- ] 는 걍 맵안에 한 pair이다..
+c++17 에서 새로 도입된 구조??방법?? 같은 거임

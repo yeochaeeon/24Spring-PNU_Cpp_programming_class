@@ -10,16 +10,16 @@ String::String(){
 String::String(const char* str){
     len = strlen(str);
     this->str = new char[len+1];
-    strcpy(this->str,str);
+    std::copy(str,str+len+1,this->str);
 }
 // 복사 생성자
 String::String(const String& other) {
     len = other.len;
     str = new char[len + 1];
-    strcpy(str, other.str);
+    std::copy(other.str,other.str+len+1,this->str);
+    //strcpy(str, other.str);
 }
-
-String::~String() {
+String::~String() noexcept {
     delete [] str;
     std::cout << "Destructor" << std::endl;
 }

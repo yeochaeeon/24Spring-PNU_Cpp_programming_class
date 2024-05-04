@@ -1,0 +1,13 @@
+##complete !!
+
+friend class Compare;
+    // your code here
+    class Compare{
+    public:
+        bool operator()(Student &lhs , Student &rhs){
+            if (lhs.grade == rhs.grade ) return lhs.name < rhs.name;
+            else return lhs.grade < rhs.grade ;
+        }
+    };
+
+    가 포인ㅌ트다
