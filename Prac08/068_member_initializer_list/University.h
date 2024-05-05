@@ -1,22 +1,22 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
 #include "Department.h"
 
 class University{
 
 public:
-    University(std::string univ, int depts)
-    : univ(univ),depts(depts){};
+    University(std::string univ, int ndepts)
+    : univ(univ),ndepts(ndepts){
+        depts = new Department[ndepts];
+    };
     void setDepartments(Department* dept){
-        depart.insert(depart.end(),dept,dept+depts);
-
+        std::copy(dept,dept+ndepts,depts);
     }
     void printInfo(){
         std::cout << "University Name: " << univ << std::endl;
         std::cout << "Number of Departments: " << depts << std::endl;
         std::cout << std::endl;
-        std::for_each(depart.begin(),depart.end(),[](Department& i)
+        std::for_each(depts,depts+ndepts,[](Department& i)
         {
             std::cout << "Department Name: " << i.getName() << std::endl ;
             if (i.getFac() == nullptr) {
@@ -32,7 +32,8 @@ public:
         });
     }
 private:
-    int depts;
+    int ndepts;
     std::string univ;
-    std::vector<Department> depart;
+    //std::vector<Department> depart;
+    Department* depts;
 };

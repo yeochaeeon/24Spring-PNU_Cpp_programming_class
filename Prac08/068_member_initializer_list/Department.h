@@ -8,6 +8,7 @@
 
 class Department{
 public:
+    Department(){};
     Department(std::string dept, Faculty* faculty )
         :dept(dept), fac(faculty){};
 
@@ -26,5 +27,4 @@ public:
 private:
     std::string dept;
     Faculty* fac;
-
 };
