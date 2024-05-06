@@ -53,14 +53,13 @@ int main() {
         else if (command == Command::FIND) {
             std::string search;
             std::cin >> search;
-            std::vector<PatientInfo> found = find_patient(patients, search);
+            std::vector<pPatient> found = find_patient(patients, search);
             if (found.size() == 0) std::cout << "Patient not found" << std::endl;
             else
                 std::for_each(found.begin(), found.end(),
-                              [](PatientInfo &i) {
-                                  std::cout << i.name << " " << i.age << " " << i.weight << " "
-                                            << i.height << " " << i.date << " " << i.weight / (i.height) * (i.height)
-                                            << std::endl;
+                              [](pPatient &i) {
+                                  std::cout << i->name << " " << i->age << " " << i->weight << " "
+                                            << i->height << " " << i->date << " " << i->bmi << std::endl;
                               });
         }
         else if (command == Command::COUNT) {
@@ -70,11 +69,13 @@ int main() {
             std::cout << cnt << " patients with BMI greater than " << threshold << std::endl;
         }
         else if (command == Command::REMOVE) {
+            std::cout << "## Entered to remove mode " << std::endl;
             int date;
             std::cin >> date;
             remove_old_records(patients,date);
             print_patients(patients);
         }
+
     }
     return 0;
 }

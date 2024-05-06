@@ -2,9 +2,12 @@
 // Created by codjs on 2024-05-05.
 //
 #include "patient.h"
+struct PatientInfo;
 pPatient create_patient(const std::string &name, int age, float weight, float height, int date){
     // PatientInfo 객체를 생성하고 스마트 포인터로 감싸서 반환 .
-    return std::make_unique<PatientInfo>(PatientInfo{name, age, weight, height, date, weight / (height * height)});
+    std::unique_ptr<PatientInfo> p {new PatientInfo{name, age, weight, height, date, weight / (height * height )}};
+    //return std::make_unique<PatientInfo>(PatientInfo{name, age, weight, height, date, weight / (height * height ) });
+    return p;
 }
 void sort_patients(PatientList &patients) {
     //implement your code
@@ -12,13 +15,30 @@ void sort_patients(PatientList &patients) {
     {return  a->bmi > b->bmi ; });
 
 }
-std::vector<PatientInfo> find_patient(const PatientList &patients, const std::string &name){
+std::vector<pPatient> find_patient(const PatientList &patients, const std::string &name){
     //implement your code
-    std::vector<PatientInfo> found_list ;
-    std::for_each(patients.begin(),patients.end(),
-                               [name, &found_list](const pPatient& i){if (i->name == name) found_list.push_back(*i);});
-    // const 랑 & 주의하기 !!
+    std::vector<pPatient> found_list ;
+
+    auto it = std::find_if(patients.begin(),patients.end(),
+                           [name](const pPatient& i){return i -> name == name; });
+
+    while (it != patients.end()){
+        found_list.push_back(std::make_unique<PatientInfo>(**it));
+        it = std::find_if(std::next(it),patients.end(),[name](const pPatient& patient){
+            return patient->name == name;
+        });
+    }
     return found_list;
+
+//    auto it = std::find_if(patients.begin(),patients.end(),
+//                               [name](const pPatient& i){return i -> name == name; });
+//    // const 랑 & 주의하기 !!
+//    while (it != patients.end()){
+//        found_list.push_back(**it);
+//        it = std::find_if(std::next(it),patients.end(),[name](const pPatient& patient){
+//            return patient->name == name;
+//        });
+//    }
 }
 int count_patients(const PatientList &patients, float threshold){
     //implement your code
