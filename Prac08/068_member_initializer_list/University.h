@@ -14,7 +14,7 @@ public:
     }
     void printInfo(){
         std::cout << "University Name: " << univ << std::endl;
-        std::cout << "Number of Departments: " << depts << std::endl;
+        std::cout << "Number of Departments: " << ndepts << std::endl;
         std::cout << std::endl;
         std::for_each(depts,depts+ndepts,[](Department& i)
         {

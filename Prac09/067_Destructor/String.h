@@ -5,10 +5,10 @@
 #include <cstring>
 class String{
     public:
-        String();
         String(const char* str);
-        String (const String& other);
-        ~String() noexcept;
+        //String(const String& other);
+        String& operator=(const String& other);
+        ~String();
         void print(const char* msg);
         char& at(size_t i);
     private:

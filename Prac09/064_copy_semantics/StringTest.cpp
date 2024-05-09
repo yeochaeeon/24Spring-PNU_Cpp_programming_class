@@ -15,7 +15,7 @@ String createName(){
 }
 
 int main(){
-    String s1; // defualt constructor
+    String s1; // default constructor
     s1.print("s1");
 
     String s2 = "abc"; // copy constructor

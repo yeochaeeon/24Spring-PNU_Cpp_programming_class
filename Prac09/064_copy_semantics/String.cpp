@@ -6,7 +6,7 @@ String::String(){
     s = new char[1];
     s[0] = '\0';
     len = 0;
-    std::cout << "##default" << std::endl;
+    //std::cout << "##default" << std::endl;
 }
 
 String::String(const char* str){
@@ -18,14 +18,14 @@ String::String(const char* str){
     this->s = new char[len+1] ;
     //strcpy(s,str);
     std::copy(str,str+len+1,this->s); // last 에 'len+1'으로 해주어야한다.
-    std::cout << "##string" << std::endl;
+    //std::cout << "##string" << std::endl;
 }
 String::String(const String& other){
 
     this->len = other.len;
     this->s = new char[len + 1];
     std::copy(other.s, other.s+len+1,this->s);// last 에 'len+1'으로 해주어야한다.
-    std::cout << "##copy" << std::endl;
+    //std::cout << "##copy" << std::endl;
 } //copy constructor
 
 String& String::operator=(const String& other){
@@ -37,7 +37,7 @@ String& String::operator=(const String& other){
         // copy 두번째 인자는 마지막원소의 바로 다음을 가리켜야 함.
         // 문자열 복사.
     }
-    std::cout << "##Operator" << std::endl;
+    //std::cout << "##Operator" << std::endl;
     return *this; // 자기 자신 반환
 } // copy assignment constructor
 

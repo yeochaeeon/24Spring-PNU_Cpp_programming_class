@@ -28,7 +28,7 @@ void printlist( PatientList& list){ //const 있 없의 차이가 대체 머지..
 }
 pPatient searchByName(PatientList& list, std::string name){
     auto it = std::find_if(list.begin(),list.end(),[name](pPatient& i){return i-> name == name;});
-if (it != list.end()) return std::make_unique<PatientInfo>(**it);
+    if (it != list.end()) return std::make_unique<PatientInfo>(**it);
 }
 void overBmiList(PatientList& list, std::string opt, int level){
     PatientList NewList ;

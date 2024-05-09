@@ -4,27 +4,26 @@
 
 #include <iostream>
 #include "Faculty.h"
-#include <vector>
+
 
 class Department{
 public:
     Department(){};
     Department(std::string dept, Faculty* faculty )
-        :dept(dept), fac(faculty){};
+        :dept(dept), faculty(faculty){};
 
-    Department(const std::string& deptName)
-        : dept(deptName), fac(nullptr) {};
+    Department(std::string dept): dept(dept),faculty(){};
 
-    std::string getName(){ return dept; }
+    std::string getName(){ return dept;}
 
     void setFaculty(Faculty* faculty){
-        fac = faculty;
+        this->faculty = faculty;
     }
 
     Faculty* getFac(){
-        return fac;
+        return faculty;
     }
 private:
     std::string dept;
-    Faculty* fac;
+    Faculty* faculty;
 };
