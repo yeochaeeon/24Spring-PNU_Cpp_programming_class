@@ -5,6 +5,7 @@
 
 //static size_t fisrtID;
 size_t firstID= 1 ;
+//size_t왜 썼더라
 
 class Person {
 public:
@@ -14,9 +15,12 @@ public:
         ID = firstID++;
     }
 
-    friend std::ostream& operator << (std::ostream& out, const Person& p) {
-        // implementation
-        return out << p.ID << " " << p.name << " " << p.age ;
+//    friend std::ostream& operator << (std::ostream& out, const Person& p) {
+//        // implementation
+//        return out << p.ID << " " << p.name << " " << p.age ;
+//    }
+    friend std::ostream& operator << (std::ostream& os , const Person& p){
+        return os << p.ID << " " << p.name << " " << p.age ;
     }
 
     bool operator < (const Person& rhs) const {

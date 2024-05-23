@@ -7,3 +7,6 @@
 
 
  때문에 요소의 삽입, 제거가 빈번할 경우 성능이 저하될 수 있으며 정렬할 필요가 없는 경우 map 대신 unordered_map을 사용할 수 있다.
+
+
+ erson이 const가 되는 이유는 std::map 같은 컨테이너의 요소가 std::pair<const Key, T> 타입이기 때문입니다.

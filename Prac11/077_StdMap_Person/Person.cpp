@@ -19,16 +19,21 @@ int main() {
         payroll.insert(make_person());
 
     std::cout << "Sort By ID" << std::endl;
-    for (const auto& [person, salary] : payroll)
+    for (auto [person, salary] : payroll)
         std::cout << person << " " << salary << std::endl;
 
     std::vector<std::pair<Person, size_t>>v_payroll(std::begin(payroll), std::end(payroll));
 
+//    std::cout << "Sort By Age" << std::endl;
+//    std::sort(std::begin(v_payroll), std::end(v_payroll),
+//              [](const auto& lhs, const auto& rhs) {
+//                  auto Comparator = Person::ComparatorByAge();
+//                  return Comparator(lhs.first, rhs.first);
+//              });
     std::cout << "Sort By Age" << std::endl;
     std::sort(std::begin(v_payroll), std::end(v_payroll),
               [](const auto& lhs, const auto& rhs) {
-                  auto Comparator = Person::ComparatorByAge();
-                  return Comparator(lhs.first, rhs.first);
+                  return Person::ComparatorByAge()(lhs.first, rhs.first);
               });
     for(const auto& [person, salary] : v_payroll)
         std::cout << person<< " " << salary << std::endl;
@@ -36,8 +41,7 @@ int main() {
     std::cout << "Sort By Name" << std::endl;
     std::sort(std::begin(v_payroll), std::end(v_payroll),
               [](const auto& lhs, const auto& rhs) {
-                  auto Comparator = Person::ComparatorByName();
-                  return Comparator(lhs.first, rhs.first);
+                  return Person::ComparatorByName()(lhs.first, rhs.first);
               });
     for(const auto& [person, salary] : v_payroll)
         std::cout << person<< " " << salary << std::endl;

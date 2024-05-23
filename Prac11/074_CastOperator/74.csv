@@ -1,0 +1,8 @@
+explicit operator int () const {
+        return (int)cent;
+    }
+
+* explicit 있고 없고의 차이 :
+- 클래스간의 cast operator 를 정의할 때 , explicit 으로 선언을 해준다면
+- 형 변환시 명시적 형변환 만을 허용하게 된다 .
+- explicit 으로 정의하고 묵시적 형변환을 시도하면 오류가 뜬다.

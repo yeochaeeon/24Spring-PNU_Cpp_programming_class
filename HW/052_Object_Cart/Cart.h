@@ -6,7 +6,7 @@ using const_iterator = std::vector<Item>::const_iterator;
 
 class Cart {
 public:
-    Cart(Checkout* checkout) : checkout_(checkout) {}
+    Cart(Checkout* checkout) : checkout_(checkout){};
 
     void addItem(const Item& item) ;
     void deleteItem(int id) ;
