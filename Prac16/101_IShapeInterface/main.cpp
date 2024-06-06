@@ -7,7 +7,7 @@
 class IShape {
 public:
     virtual void draw() = 0;
-    virtual ~IShape() {} ;
+    virtual ~IShape() {};
 };
 class GroupShape : public IShape {
 public:

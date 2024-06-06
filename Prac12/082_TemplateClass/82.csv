@@ -1,0 +1,2 @@
+* 유니크 포인터 타입 데이터 할당
+_data = std::make_unique<T[]>(other._size);

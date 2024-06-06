@@ -5,6 +5,9 @@
 #include <memory>
 #include <numeric> // accumulate
 #include <iomanip> // setprecision
+#include "Rectangle.h"
+#include "Triangle.h"
+#include "Circle.h"
 
 void doingSomething(const std::vector<std::unique_ptr<IShape>>& shapes) {
     for (const auto& s : shapes)
@@ -25,6 +28,7 @@ void doingSomething(const std::vector<std::unique_ptr<IShape>>& shapes) {
 
 
 int main() {
+
     std::vector<std::unique_ptr<IShape>> shapes;
 
     shapes.emplace_back(std::make_unique<Rectangle>(std::vector<Point>{{0, 0}, {0, 2}, {2, 2}, {2, 0}}));

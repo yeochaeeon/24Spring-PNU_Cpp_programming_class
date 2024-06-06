@@ -1,0 +1,11 @@
+```template <typename T, size_t N>```
+처럼 typename 뿐만이 아니라 특정 타입의 값에 대한 부분도 template 을 사용할 수 있다.
+
+## Complex - ==operator 구현
+* 작동 원리
+  1. operator== 구현:
+  operator==는 두 객체가 같은지 비교합니다.
+  예를 들어 Complex 클래스에서 operator==를 구현하면 두 Complex 객체의 실수부와 허수부가 모두 같은지 비교합니다.
+  2. 자동 생성되는 operator!=:
+  operator!=는 operator==의 결과를 반대로 하여 두 객체가 다른지 비교합니다.
+  즉, **!(a == b)**와 같이 동작합니다.

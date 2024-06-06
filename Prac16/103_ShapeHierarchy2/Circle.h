@@ -6,6 +6,7 @@
 #define CIRCLE_H
 #include "IShape.h"
 #include <cmath>
+
 class Circle : public IShape {
 public:
     Circle(const Point center, const double radius) : IShape({center}), radius(radius){};

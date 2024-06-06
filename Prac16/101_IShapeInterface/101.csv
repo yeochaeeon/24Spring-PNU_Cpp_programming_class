@@ -1,7 +1,6 @@
 class GroupShape : public IShape {
 public:
-    GroupShape(std::string name) :
-    groupname_(name) {
+    GroupShape(std::string name) : groupname_(name) {
         std::cout << "Group Name: " << groupname_ << std::endl;
     }
     void add(IShape shape){
