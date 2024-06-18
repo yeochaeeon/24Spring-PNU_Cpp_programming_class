@@ -1,0 +1,1 @@
+static int 로 manager와 employee 가 공유하는 id 설정

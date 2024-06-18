@@ -36,7 +36,7 @@ public:
     };
     ~MyList() noexcept {
         delete [] _data;
-        //소멸자 선언.. 해줘야하나 봐
+        //소멸자 선언.. 해줘야하나 봐..
     };
     void add(T& data){
         _data[pos++] = data;
